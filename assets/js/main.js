@@ -15,7 +15,7 @@ function validation() {
     const loseNum = rumusLose(parseFloat(tMatch.value), parseFloat(tWr.value), parseFloat(wrReq.value));
     let text = "";
     if (tMatch.value == "" || tWr.value == "" || wrReq.value == "") {
-        text = `Field harus diisi bro.`;
+        text = `Field tidak boleh kosong.`;
         display(text);
     } else if (parseFloat(tMatch.value) < 0 || parseFloat(tWr.value) < 0 || parseFloat(wrReq.value) < 0) {
         text = `Field tidak boleh lebih kecil dari 0`;
@@ -36,7 +36,7 @@ function validation() {
         text = `Kamu memerlukan sekitar <b>1</b> win tanpa lose untuk mendapatkan win rate <b>${wrReq.value}%</b>`;
         display(text);
     } else if (parseFloat(tMatch.value) == 0 && parseFloat(wrReq.value) == 100) {
-        text = `Gak bisa euy hehe`;
+        text = `Mana saya tau, kan saya Ikan`;
         display(text);
     } else {
         text = `Kamu memerlukan sekitar <b>${resultNum}</b> win tanpa lose untuk mendapatkan win rate <b>${wrReq.value}%</b>`;
